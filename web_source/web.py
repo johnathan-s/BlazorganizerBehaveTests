@@ -52,6 +52,10 @@ class Web(object):
         time.sleep(1)
         el.click()
 
+    def click_element(self, web_element):
+        time.sleep(1)
+        web_element.click()
+
     def get_element_text_by_id(self, element_id):
         el = self.find_by_id(element_id)
         return el.text

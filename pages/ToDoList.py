@@ -5,4 +5,6 @@ class ToDoList:
     insertDeleteButtonId = "delete-btn"
     insertCancelButtonId = "cancel-btn"
     datagridTableId = "ToDoListID_content_table"
+    labelDateDueInputValue = "DateDue-input-label"
+    labelDescriptionInputValue = "Description-input-label"
 

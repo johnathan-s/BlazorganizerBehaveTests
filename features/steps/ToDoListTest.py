@@ -25,6 +25,10 @@ def step_impl(context):
 
 @then("the to-do item info has the default values")
 def step_impl(context):
+    todays_date_string = get_date_validation_string(0)
+    label_value = context.web.get_element_text_by_id(todolist.labelDateDueInputValue)
+    assert (todays_date_string in context.web.get_element_text_by_id(todolist.labelDateDueInputValue))
+    assert (context.web.get_element_text_by_id(todolist.labelDescriptionInputValue) is None)
     assert (context.web.is_enabled_by_id(todolist.insertSaveButtonId) is True)
     assert (context.web.is_enabled_by_id(todolist.insertDeleteButtonId) is False)
 
@@ -40,7 +44,7 @@ def step_impl(context):
     assert (context.web.is_enabled_by_id(todolist.insertSaveButtonId) is True)
 
 
-@step('I click on the "insert/update button"')
+@step("click the upcert button")
 def step_impl(context):
     assert (context.web.is_enabled_by_id(todolist.insertSaveButtonId) is True)
     context.web.click_element_by_id(todolist.insertSaveButtonId)
@@ -48,78 +52,71 @@ def step_impl(context):
 
 @then("the new to-do item is added to the list")
 def step_impl(context):
-    create_new_todo_list_item(context, 4, str(uuid.uuid1()))
+    days_in_future = 10
+    new_todo_item_description = str(uuid.uuid1())
+    new_to_item_date = get_date_validation_string(days_in_future)
+    create_new_todo_list_item(context, days_in_future, new_todo_item_description)
+    table_rows = get_table_rows(context)
+    found = False
+    for row in table_rows:
+        if new_todo_item_description in row.text and new_to_item_date in row.txt:
+            found = True
+            break
+    assert (found is True)
 
 
 @when("I click on an existing to-do list item row")
 def step_impl(context):
+    days_in_future = 14
+    new_todo_item_description = str(uuid.uuid1())
+    new_to_item_date = get_date_validation_string(days_in_future)
+    create_new_todo_list_item(context, days_in_future, new_todo_item_description)
     table_rows = get_table_rows(context)
+    found = False
     for row in table_rows:
-        print(row.text)
+        if new_todo_item_description in row.text and new_to_item_date in row.txt:
+            context.web.click_element(row)
+            found = True
+            break
+    assert (found is True)
 
 
 @then("the edit Due date field has the to-do list item's date")
 def step_impl(context):
-    """
-    :type context: behave.runner.Context
-    """
-    raise NotImplementedError(u'STEP: Then the edit Due date field has the to-do list item\'s date')
+    assert (focused_row_due_date in context.web.get_element_text_by_id(todolist.labelDateDueInputValue))
 
 
 @step("the edit Description has the to-do list item's description")
 def step_impl(context):
-    """
-    :type context: behave.runner.Context
-    """
-    raise NotImplementedError(u'STEP: And the edit Description has the to-do list item\'s description')
+    assert (focused_row_description in context.web.get_element_text_by_id(todolist.labelDateDueInputValue))
 
 
 @step("I click on the delete button")
 def step_impl(context):
-    """
-    :type context: behave.runner.Context
-    """
-    raise NotImplementedError(u'STEP: And I click on the delete button')
+    assert (context.web.is_enabled_by_id(todolist.insertDeleteButtonId) is True)
+    context.web.click_element_by_id(todolist.insertDeleteButtonId)
 
 
 @then("the to-do item is deleted from the to-do list")
 def step_impl(context):
-    """
-    :type context: behave.runner.Context
-    """
-    raise NotImplementedError(u'STEP: Then the to-do item is deleted from the to-do list')
+    table_rows = get_table_rows(context)
+    found = False
+    for row in table_rows:
+        if focused_row_description in row.text:
+            found = True
+            break
+    assert (found is False)
 
 
-@step("the to-do item's Due date is changed")
+@step("the to-do item due date is changed from its original due date")
 def step_impl(context):
-    """
-    :type context: behave.runner.Context
-    """
-    raise NotImplementedError(u'STEP: And the to-do item\'s Due date is changed')
+    insert_due_date(context, 7)
 
 
-@step("I click on the insert/update button")
+@step("the to-do item description is change from its original description")
 def step_impl(context):
-    """
-    :type context: behave.runner.Context
-    """
-    raise NotImplementedError(u'STEP: And I click on the insert/update button')
-
-
-@then("the to-do item is updated in the to-do list")
-def step_impl(context):
-    """
-    :type context: behave.runner.Context
-    """
-    raise NotImplementedError(u'STEP: Then the to-do item is updated in the to-do list')
-
-
-@step("the to-do item's Description is changed")
-def step_impl(context):
-    """
-    :type context: behave.runner.Context
-    """
-    raise NotImplementedError(u'STEP: And the to-do item\'s Description is changed')
+    insert_description(context, str(uuid.uuid1()))
+    assert (context.web.is_enabled_by_id(todolist.insertSaveButtonId) is True)
 
 
 @then("there are no console errors")
@@ -130,11 +127,52 @@ def step_impl(context):
     assert (len(context.web.get_browser_errors()) == 0)
 
 
+@then("the to-do item is updated in the to-do list to show the updated due date")
+def step_impl(context):
+    table_rows = get_table_rows(context)
+    found = False
+    for row in table_rows:
+        if focused_row_description in row.text:
+            found = True
+            assert(focused_row_due_date in row.text)
+            break
+    assert (found is True)
+
+
+@then("the to-do item is updated in the to-do list to show the updated description")
+def step_impl(context):
+    table_rows = get_table_rows(context)
+    found = False
+    for row in table_rows:
+        if focused_row_description in row.text:
+            found = True
+            break
+    assert (found is True)
+
+
+@then("the to-do item is updated in the to-do list to show the updated due date and updated description")
+def step_impl(context):
+    table_rows = get_table_rows(context)
+    found = False
+    for row in table_rows:
+        if focused_row_description in row.text and focused_row_due_date in row.text:
+            found = True
+            break
+    assert (found is True)
+
+
 def get_date_string(days_in_future):
     now = datetime.now()
     td = timedelta(days=days_in_future)
     future_date = now + td
     return "{:0>2}{:0>2}{:0>4}".format(future_date.month, future_date.day, future_date.year)
+
+
+def get_date_validation_string(days_in_future):
+    now = datetime.now()
+    td = timedelta(days=days_in_future)
+    future_date = now + td
+    return "{:0>2}/{:0>2}/{:0>4}".format(future_date.month, future_date.day, future_date.year)
 
 
 def get_table_rows(context):
@@ -146,13 +184,16 @@ def get_table_rows(context):
 
 
 def insert_due_date(context, days_in_future):
-    context.focused_row_due_date = get_date_string(days_in_future)
-    context.web.send_keys_by_id(todolist.insertDueDateId, context.focused_row_due_date)
+    focused_row_due_date = get_date_validation_string(days_in_future)
+    date_input = get_date_string(days_in_future)
+    context.web.send_keys_by_id(todolist.insertDueDateId, date_input)
 
 
 def insert_description(context, description):
+    el = context.web.finds_by_id(todolist.insertDescriptionId)
+    el.clear()
     context.web.send_keys_by_id(todolist.insertDescriptionId, description)
-    context.focused_row_description = description
+    focused_row_description = description
 
 
 def create_new_todo_list_item(context, days_in_future, description):
