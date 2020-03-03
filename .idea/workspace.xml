@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/ToDoListTest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/ToDoListTest.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/steps/ToDoListTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/ToDoListTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/ToDoList.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ToDoList.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_source/web.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_source/web.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +56,7 @@
       <recent name="C:\Users\johnathan.000\PycharmProjects\BlazorganizerBehaveTests\drivers" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Behave.ToDoListTest">
     <configuration name="ToDoListTest" type="PyBehaveRunConfigurationType" factoryName="Behave">
       <module name="BlazorganizerBehaveTests" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -72,6 +71,26 @@
       <option name="ADDITIONAL_ARGS" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="ToDoListTest.feature:The User Loads the ToDoList page" type="PyBehaveRunConfigurationType" factoryName="Behave" temporary="true">
+      <module name="BlazorganizerBehaveTests" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <WHAT_TO_RUN WHAT_TO_RUN="$PROJECT_DIR$/features/ToDoListTest.feature" />
+      <SCENRAIO_NAMES SCENRAIO_NAMES="The User Loads the ToDoList page" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Behave.ToDoListTest.feature:The User Loads the ToDoList page" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -124,7 +143,19 @@
       <workItem from="1582702550521" duration="1481000" />
       <workItem from="1582704887246" duration="1790000" />
       <workItem from="1582709121767" duration="1785000" />
-      <workItem from="1582711063819" duration="324000" />
+      <workItem from="1582711063819" duration="1600000" />
+      <workItem from="1583186058543" duration="1444000" />
+      <workItem from="1583187896016" duration="1791000" />
+      <workItem from="1583189793314" duration="134000" />
+      <workItem from="1583190279301" duration="858000" />
+      <workItem from="1583201902277" duration="1790000" />
+      <workItem from="1583203736747" duration="1792000" />
+      <workItem from="1583205562191" duration="1785000" />
+      <workItem from="1583213257679" duration="1740000" />
+      <workItem from="1583215088638" duration="1787000" />
+      <workItem from="1583216906904" duration="1910000" />
+      <workItem from="1583222479718" duration="1663000" />
+      <workItem from="1583227086170" duration="336000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1582234830105</created>
@@ -147,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582630862372</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="steps complete.  Debugging still underway.">
+      <created>1582711434991</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582711434992</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +194,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="working through the helper method debugging at the same time I am working through the step definitions" />
-    <option name="LAST_COMMIT_MESSAGE" value="working through the helper method debugging at the same time I am working through the step definitions" />
+    <MESSAGE value="steps complete.  Debugging still underway." />
+    <option name="LAST_COMMIT_MESSAGE" value="steps complete.  Debugging still underway." />
   </component>
   <component name="WindowStateProjectService">
     <state x="679" y="176" key="#ToDoListTest.feature" timestamp="1582249913922">
@@ -179,58 +218,60 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/87.-1050.1680.1010@0.0.1920.1040" timestamp="1582623393649" />
-    <state x="544" y="117" key="CommitChangelistDialog2" timestamp="1582630844947">
+    <state x="544" y="117" key="CommitChangelistDialog2" timestamp="1582711421341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="544" y="117" key="CommitChangelistDialog2/0.0.1920.1040/87.-1050.1680.1010@0.0.1920.1040" timestamp="1582630844947" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1582710370409">
+    <state x="544" y="117" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582711421341" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1583223580802">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/87.-1050.1680.1010@0.0.1920.1040" timestamp="1582630915483" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582710370409" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1582710370408">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/87.-1050.1680.1010@0.0.1920.1040" timestamp="1583223580802" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582712072310" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1583223580802">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/87.-1050.1680.1010@0.0.1920.1040" timestamp="1582630915483" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582710370408" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1582710370408">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/87.-1050.1680.1010@0.0.1920.1040" timestamp="1583223580802" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582712072309" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1583223580802">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/87.-1050.1680.1010@0.0.1920.1040" timestamp="1582630915483" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582710370408" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1582710370408">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/87.-1050.1680.1010@0.0.1920.1040" timestamp="1583223580802" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582712072309" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1583223580802">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/87.-1050.1680.1010@0.0.1920.1040" timestamp="1582630915483" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582710370408" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1582710370278">
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/87.-1050.1680.1010@0.0.1920.1040" timestamp="1583223580802" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582712072310" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1583217698602">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/87.-1050.1680.1010@0.0.1920.1040" timestamp="1582630915484" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582710370278" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1582710370278">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/87.-1050.1680.1010@0.0.1920.1040" timestamp="1583217698602" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582712072310" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1583217698602">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/87.-1050.1680.1010@0.0.1920.1040" timestamp="1582630915483" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582710370278" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1582710370278">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/87.-1050.1680.1010@0.0.1920.1040" timestamp="1583217698602" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582712072310" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1583217698601">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/87.-1050.1680.1010@0.0.1920.1040" timestamp="1582630915483" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582710370278" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1582710370278">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/87.-1050.1680.1010@0.0.1920.1040" timestamp="1583217698601" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582712072310" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1583217698602">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/87.-1050.1680.1010@0.0.1920.1040" timestamp="1582630915484" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582710370278" />
-    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1582630866923">
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/87.-1050.1680.1010@0.0.1920.1040" timestamp="1583217698602" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582712072310" />
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1583227414648">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040/87.-1050.1680.1010@0.0.1920.1040" timestamp="1582630866923" />
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1582711076235">
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040/87.-1050.1680.1010@0.0.1920.1040" timestamp="1583227414648" />
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582711438886" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1583227086341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/87.-1050.1680.1010@0.0.1920.1040" timestamp="1582686961595" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/87.-1050.1680.1010@0.0.1920.1040" timestamp="1583227086341" />
     <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582711076235" />
     <state x="712" y="442" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog" timestamp="1582251172062">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -242,14 +283,20 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/features/steps/ToDoListTest.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="1" />
+          <line>89</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/features/steps/ToDoListTest.py</url>
+          <line>107</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/BlazorganizerBehaveTests$ToDoListTest.coverage" NAME="ToDoListTest Coverage Results" MODIFIED="1582710370220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/BlazorganizerBehaveTests$ToDoListTest.coverage" NAME="ToDoListTest Coverage Results" MODIFIED="1583227134992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/BlazorganizerBehaveTests$ToDoListTest_feature_The_User_Loads_the_ToDoList_page.coverage" NAME="ToDoListTest.feature:The User Loads the ToDoList page Coverage Results" MODIFIED="1582712072284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/BlazorganizerBehaveTests$ToDoListTest_feature.coverage" NAME="ToDoListTest.feature Coverage Results" MODIFIED="1582249993093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

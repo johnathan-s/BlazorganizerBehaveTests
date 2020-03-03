@@ -33,6 +33,8 @@ class Web(object):
         return w_el.is_enabled()
 
     def send_keys_by_id(self, element_id, _send_keys):
+        self.finds_by_id(element_id)[0].click()
+        self.finds_by_id(element_id)[0].clear()
         self.finds_by_id(element_id)[0].send_keys(_send_keys)
 
     def finds_by_tag_name(self, tag_name):
@@ -62,5 +64,6 @@ class Web(object):
 
     def get_browser_errors(self):
         for entry in self._web_driver.get_log('browser'):
-            print("browser error " + entry)
+            print("browser error level " + entry["level"])
+            print("browser error message " + entry["message"])
         return self._web_driver.get_log('browser')
